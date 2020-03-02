@@ -1,0 +1,13 @@
+{
+  "name": "local-webpagetest",
+  "version": "1.0.0",
+  "description": "Local webpage test with docker",
+  "scripts": {
+    "prestart": "npm run build:server && npm run build:agent",
+    "start": "docker-compose up -d",
+    "build:server": "docker build -t local-wptserver ./server",
+    "build:agent": "docker build -t local-wptagent ./agent"
+  },
+  "author": "Miszo Radomski <miszo.radomski@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  wptserver:
+    image: local-wptserver
+    restart: always
+    ports:
+      - '1000:80'
+  wptagent:
+    image: local-wptagent
+    restart: always
+    network_mode: host
+    ports:
+      - '1001:80'
+    environment:
+      SERVER_URL: http://localhost:1000/work/
+      LOCATION: Test
+    depends_on:
+      - wptserver
