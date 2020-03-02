@@ -2,7 +2,7 @@
 
 It is basically [this article](https://medium.com/@francis.john/local-webpagetest-using-docker-90441d7c2513) wrapped with docker-compose.
 
-### Requirements
+## Requirements
 * docker@2.0.0
 * docker-compose@1.23
 * npm@6.13.4
